@@ -21,7 +21,7 @@ include "connection.php";
 </head>
 
 <body class="main-body">
-    <div class="container-fluid vh-100 d-flex">
+    <div class="container-fluid vh-100 d-flex justify-content-center align-items-center">
         <div class="row align-content-center">
            
 
@@ -31,7 +31,7 @@ include "connection.php";
                 <div class="row g-5">
 
 
-                    <div class="col-12 d-none" id="msgdiv">
+                    <div class="mt-3 d-none" id="msgdiv">
                         <div class="alert alert-danger" role="alert" id="msg">
 
                         </div>
