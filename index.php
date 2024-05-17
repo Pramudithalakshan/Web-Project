@@ -21,16 +21,16 @@ include "connection.php";
 </head>
 
 <body class="main-body">
-    <div class="container-fluid vh-100 d-flex justify-content-center align-items-center">
-        <div class="row align-content-center">
-           
+    <div class="container-fluid vh-100 d-flex justify-content-center">
+
+        <div class="row align-content-center" id="main-div">
 
             <!-- signupbox -->
 
             <div class="col-12 col-lg-6 d-none" id="signUpBox">
-                <div class="row g-5">
+                <div class="row g-2">
 
-
+          
                     <div class="mt-3 d-none" id="msgdiv">
                         <div class="alert alert-danger" role="alert" id="msg">
 
@@ -142,10 +142,10 @@ include "connection.php";
                     <div class="col-6 text-end">
                         <a href="#" class="link-primary">Forgot Password?</a>
                     </div>
-                    <div class="col-12 col-lg-6 d-grid">
+                    <div class="col-6 col-lg-6 d-grid">
                         <button class="btn btn-primary" onclick="signin();">Sign In</button>
                     </div>
-                    <div class="col-12 col-lg-6 d-grid">
+                    <div class="col-6 col-lg-6 d-grid">
                         <button class="btn btn-danger" onclick="changeView();">New to eShop? Join Now</button>
                     </div>
                 </div>
