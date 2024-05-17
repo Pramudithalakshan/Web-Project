@@ -11,7 +11,7 @@ include "connection.php";
 
     <title>FruitVista</title>
 
-    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="bootstrap.js">
     <link rel="stylesheet" href="style.css">
 
     <link rel="#" href="#">
@@ -21,9 +21,7 @@ include "connection.php";
 <body class="main-body">
     <div class="container-fluid vh-100 d-flex">
         <div class="row align-content-center">
-            <!--header-->
-
-            <!--header-->
+           
 
             <!-- signupbox -->
 
@@ -49,7 +47,7 @@ include "connection.php";
 
                     <div class="col-12">
                         <label class="form-label">Email Address</label>
-                        <input type="email" class="form-control" placeholder="Pramuditha@gmail.com" id="email" />
+                        <input type="email" class="form-control" placeholder="example@gmail.com" id="email" />
                     </div>
 
                     <div class="col-12">
@@ -106,10 +104,8 @@ include "connection.php";
             <div class="col-12 col-lg-4 p-3" id="signInBox">
                 <div class="row g-5">
 
-                 <div class="col-12 d-done" role="alert" id="msg1">
-                        <div class="alert alert-danger" role="alert" id="msg1">
-
-                        </div>
+                 <div class="mt-2 d-none" id="msg 1">
+                        <div class="alert alert-dark" role="alert" id="msg1"></div>
                     </div>
 
                     <?php
