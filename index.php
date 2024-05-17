@@ -1,9 +1,10 @@
 <?php
+
 include "connection.php";
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -11,6 +12,7 @@ include "connection.php";
 
     <title>FruitVista</title>
 
+    <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="bootstrap.js">
     <link rel="stylesheet" href="style.css">
 
@@ -26,7 +28,7 @@ include "connection.php";
             <!-- signupbox -->
 
             <div class="col-12 col-lg-6 d-none" id="signUpBox">
-                <div class="row g-5 p-3">
+                <div class="row g-5">
 
 
                     <div class="col-12 d-none" id="msgdiv">
