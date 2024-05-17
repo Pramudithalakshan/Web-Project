@@ -1,0 +1,22 @@
+.main-body{
+    background-image: url("resource/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@font-face {
+    font-family: "ShadowsIntoLight";
+    src: url("font/ShadowsIntoLight-Regular.ttf");
+}
+
+ .form-label{
+    font-family: ShadowsIntoLight;
+    font-size: 30px;
+    font-weight: bolder;
+    
+ }
+ .form-control{
+    opacity: 75%;
+    font-weight: bolder;
+   
+ }
