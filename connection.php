@@ -3,8 +3,9 @@ class Database{
     public static $connection;
 
     public static function setUpConnection(){
+        
         if(!isset(Database::$connection)){
-            Database::$connection = new mysqli("localhost","root","11111","fruit_vista_db","3306");
+            Database::$connection = new mysqli("localhost","root","11111","fruitvista_db","3306");
         }
     }
 

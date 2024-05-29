@@ -33,3 +33,4 @@ if (empty($email)) {
         echo ("Invalid Username or Password.");
     }
 }
+?>

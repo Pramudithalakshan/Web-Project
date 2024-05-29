@@ -4,23 +4,83 @@
     src: url("font/ShadowsIntoLight-Regular.ttf");
 }
 
- .form-label{
+ .form-label/{
     font-family: ShadowsIntoLight;
     font-size: 30px;
     font-weight: bolder;
+    
     
  }
  .form-control{
     opacity: 75%;
     font-weight: bolder;
-   
  }
-.signUpBox{
-   box-shadow: whitesmoke;
-}
- .main-body{
-   background-image: url("resource/3.png");
-   background-position: center;
+
+ 
+ .adminSigninBody{
+   background-image: url("resource/img/5.jpg");
    background-repeat: no-repeat;
+   background-size: cover;
    
+   display: flex;
+   justify-content: center;
+   height: 100vh;
+   align-items: center;
  }
+
+ .adminSigninBox{
+   width: 358px;
+   height: 400px;
+   border-radius: 50px;
+   background-color: rgba(255, 255, 255, 0.293);
+   box-shadow: rgb(112, 172, 9);
+   padding: 20px;
+ }
+
+ .admin-body{
+   display: flex;
+   justify-content: center;
+   height: 100vh;
+   align-items: center;
+ }
+.main-body{
+  background-image: url("resource/img/4.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow-y: hidden;
+  
+  
+
+  
+}
+.singup_box{
+ background-color: rgb(200, 168, 168);
+ height: 550px;
+ width: 800px; 
+ border-radius: 20px;
+ 
+}
+ .signin_box2{
+  background-color: rgb(200, 200, 200);
+  height: 500px;
+  width: 600px; 
+  border-radius: 20px;
+  
+
+ }
+ 
+ .product-card{
+  max-width: 350px;
+  margin: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px;
+}
+
+.product-card-body{
+  padding: 20px;
+  text-align: center;
+}
+  

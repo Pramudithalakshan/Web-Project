@@ -1,0 +1,89 @@
+<?php
+
+session_start();
+include "connection.php";
+
+if (isset($_SESSION["a"])) {
+?>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin - Add New Products</title>
+
+        <link rel="stylesheet" href="bootstrap.css" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="bootstrap.js"></script> <!-- bootstrap.js is a JavaScript file, not a stylesheet -->
+    </head>
+
+    <body class="admin-body">
+
+        <!--navbar-->
+        <?php include "adminNavBar.php" ?>
+        <!--navbar-->
+
+        <div class="container-fluid ">
+            <div class="row">
+
+                <div class="col-5 offset-3 mb-5">
+
+                    <h2 class="text-center ">Add New Product</h2>
+
+                    <div class="mb-3">
+                        <label for="form-lable">Product Name</label>
+                        <input type="text" class="form-control" id="pname">
+                    </div>
+
+                    <div class="mb-3 col-12">
+                        <label class="form-label">Category</label>
+                        <select class="form-control" id="cat">
+                            <option value="0">Select Your Category</option>
+                            <?php
+                            $rs =  Database::search("SELECT * FROM `category`");
+                            $num = $rs->num_rows;
+
+                            for ($x = 0; $x < $num; $x++) {
+                                $data = $rs->fetch_assoc();
+
+                            ?>
+                                <option value="<?php echo ($data["cat_id"]); ?>"><?php echo ($data["category_name"]); ?></option>
+                            <?php
+                            }
+
+                            ?>
+
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="" class="form-lable">Description</label>
+                        <textarea type="text" class="form-control" rows="5" id="des"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="">Product Image</label>
+                        <input id="img" class="form-control" type="file" multiple>
+                    </div>
+
+                    <div class="d-grid">
+                        <button class="btn btn btn-secondary mb-2" onclick="registerProduct();">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="script.js"></script>
+    </body>
+
+    </html>
+
+<?php
+} else {
+    echo ("You're not an admin");
+}
+?>
