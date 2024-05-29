@@ -33,7 +33,7 @@
         </div>
 
         <div class="mt-5">
-            <button class="btn btn-danger col-12 mb-2" onclick="adminSingin();">SignIn</button>
+            <button class="btn btn-danger col-12 mb-2" onclick="adminSingin();">Sign In</button>
             <button class="btn btn-warning col-12" onclick="history.back()">Back To Home</button>
         </div>
 

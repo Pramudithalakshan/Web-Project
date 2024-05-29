@@ -4,16 +4,28 @@
     src: url("font/ShadowsIntoLight-Regular.ttf");
 }
 
- .form-label/{
-    font-family: ShadowsIntoLight;
-    font-size: 30px;
+@font-face{
+  font-family: "Overpass-VariableFont_wght";
+  src: url("font/Overpass-VariableFont_wght.ttf");
+}
+
+@font-face{
+  font-family: "SeymourOne-Regular";
+  src: url("font/SeymourOne-Regular.ttf");
+}
+ .singup_box{
+    font-family: Overpass-VariableFont_wght;
+    font-size: 25px;
     font-weight: bolder;
+    opacity: 90%;
     
     
  }
- .form-control{
-    opacity: 75%;
+ .signin_box2{
+   font-family: Overpass-VariableFont_wght;
     font-weight: bolder;
+    font-size: 25px;
+    opacity: 90%;
  }
 
  
@@ -38,6 +50,9 @@
  }
 
  .admin-body{
+   background-image: url(resource/img/adminbackground.jpg);
+    
+
    display: flex;
    justify-content: center;
    height: 100vh;
@@ -84,3 +99,8 @@
   text-align: center;
 }
   
+.navbar-nav{
+  font-size: 15px;
+  font-weight: bolder;
+
+}

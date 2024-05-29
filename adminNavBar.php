@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-   
+   <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
+<body class="adminNavBar-body">
 
-     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+     <nav class="navbar navbar-expand-lg  fixed-top">
 
-     <div class="container">
-         <a class="navbar-brand me-5 h1 mb-0" href="home.php"><img class="me-3" src="resource/img/icon1.ico" height="40" />Online Store Admin Dashboard</a>
+     <div class="container bg-info border-primary rounded-4">
+         <a class="navbar-brand me-5 h1 mb-0" href="home.php"><img class="me-3" src="resource/img/icon1.ico" height="30" />Online Store Admin Dashboard</a>
 
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
              <span class="navbar-toggler-icon"></span>

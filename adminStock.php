@@ -34,8 +34,6 @@ if (isset($_SESSION["a"])) {
 
             <div class="row">
 
-
-
                 <div class="col-5 offset-3">
 
                     <h2 class="tetx-center">Stock Update</h2>
@@ -71,13 +69,14 @@ if (isset($_SESSION["a"])) {
                     </div>
 
                     <div class="d-grid">
-                        <button class="btn btn-secondary">Update Stock</button>
+                        <button class="btn btn-secondary" onclick="updateStock();">Update Stock</button>
                     </div>
 
                 </div>
             </div>
         </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="script.js"></script>
     </body>
 

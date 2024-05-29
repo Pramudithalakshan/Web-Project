@@ -64,7 +64,7 @@ include "connection.php";
                 </div>
 
                 <div class="col-6">
-                    <label class="form-label">Gender</label>
+                    <label class="form-label1">Gender</label>
                     <select class="form-control" id="gender">
                  
 
@@ -132,9 +132,9 @@ include "connection.php";
                     <input type="email" class="form-control" placeholder="example@gmail.com" id="email2" value="<?php echo $email; ?>" />
                 </div>
 
-                <div class="col-12 ">
+                <div class="col-12 signin_form-label-style ">
 
-                    <label class="form-label" for="showpasswordoption">Password</label>
+                    <label class="form-label"  for="showpasswordoption">Password</label>
                     <input type="password" class="form-control" placeholder="********" id="password2" value="<?php echo $password; ?>" />
 
                     <input type="checkbox" onchange="showPassword(this)">

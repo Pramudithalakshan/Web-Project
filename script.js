@@ -221,20 +221,389 @@ function registerProduct() {
 }
 
 
-function loadProduct(x) {
-    var page = x;
+ 
 
-    var form = new FormData();
-    form.append("p", page);
+
+
+function changeView() {
+    var signInBox = document.getElementById("signInBox");
+    var signUpBox = document.getElementById("signUpBox");
+
+    signInBox.classList.toggle("d-none");
+    signUpBox.classList.toggle("d-none");
+}
+
+function signUp() {
+    var fname = document.getElementById("fname");
+    var lname = document.getElementById("lname");
+    var email = document.getElementById("email");
+    var mobile = document.getElementById("mobile");
+    var username = document.getElementById("username");
+    var password = document.getElementById("password");
+
+    //alert (fname.value);
+
+    var f = new FormData();
+    f.append("f", fname.value);
+    f.append("l", lname.value);
+    f.append("e", email.value);
+    f.append("m", mobile.value);
+    f.append("u", username.value);
+    f.append("p", password.value);
+
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if (request.readyState == 4 && request.status == 200) {
+            var response = request.responseText;
+            //alert(response);
+            if (response == "Success") {
+                document.getElementById("msg1").innerHTML = "Registration Successfully";
+                document.getElementById("msg1").className = "alert alert-success";
+                document.getElementById("msgDiv1").className = "d-block";
+
+                fname.value = "";
+                lname.value = "";
+                email.value = "";
+                mobile.value = "";
+                username.value = "";
+                password.value = "";
+            } else {
+                document.getElementById("msg1").innerHTML = response;
+                document.getElementById("msgDiv1").className = "d-block";
+            }
+        }
+    };
+
+    request.open("POST", "signUpProcess.php", true);
+    request.send(f);
+}
+
+function signIn() {
+    var un = document.getElementById("un");
+    var pw = document.getElementById("pw");
+    var rm = document.getElementById("rm");
+
+    //alert(un.value);
+
+    var f = new FormData();
+    f.append("u", un.value);
+    f.append("p", pw.value);
+    f.append("r", rm.value);
 
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState == 4 && request.status == 200) {
             var response = request.responseText;
-            alert(response);
+            //alert(response);
+            if (response == "Success") {
+                window.location = "index.php";
+            } else {
+                document.getElementById("msg2").innerHTML = response;
+                document.getElementById("msgDiv2").className = "d-block";
+            }
         }
     };
 
-    request.open("POST", "loadProductProcess.php", ture);
+    request.open("POST", "signInProcess.php", true);
+    request.send(f);
+}
+
+function adminSignIn() {
+    // alert("ok");
+
+    var un = document.getElementById("un");
+    var pw = document.getElementById("pw");
+
+    // alert(un.value);
+
+    var f = new FormData();
+    f.append("u", un.value);
+    f.append("p", pw.value);
+
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if ((request.readyState == 4) & (request.status == 200)) {
+            var response = request.responseText;
+            // alert(response);
+            if (response == "Success") {
+                window.location = "adminDashboard.php";
+            } else {
+                document.getElementById("msg").innerHTML = response;
+                document.getElementById("msgDiv").className = "d-block";
+            }
+        }
+    };
+
+    request.open("POST", "adminSignInProcess.php", true);
+    request.send(f);
+}
+
+function loadUser() {
+
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState == 4 & request.status == 200) {
+            var response = request.responseText;
+            // alert(response);
+            document.getElementById("tb").innerHTML = response;
+        }
+    }
+
+    request.open("POST", "loadUserProcess.php", true);
+    request.send();
+}
+
+function updateUserStatus() {
+    var userid = document.getElementById("uid");
+    // alert(userid.value);
+
+    var f = new FormData();
+    f.append("u", userid.value);
+
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if (request.readyState == 4 & request.status == 200) {
+            var response = request.responseText;
+            // alert(response);
+
+            if (response == "Deactive") {
+                document.getElementById("msg").innerHTML = "User Deactivate Successfully";
+                document.getElementById("msg").className = "alert alert-success";
+                document.getElementById("msgDiv").className = "d-block";
+                userid.value = "";
+                loadUser();
+
+            } else if (response == "Active") {
+                document.getElementById("msg").innerHTML = "User Activate Successfully";
+                document.getElementById("msg").className = "alert alert-success";
+                document.getElementById("msgDiv").className = "d-block";
+                userid.value = "";
+                loadUser();
+
+            } else {
+                document.getElementById("msg").innerHTML = response;
+                document.getElementById("msgDiv").className = "d-block";
+            }
+        }
+    }
+    request.open("POST", "updateUserStatusProcess.php", true);
+    request.send(f);
 
 }
+
+function reload() {
+    location.reload();
+}
+
+function brandReg() {
+
+    // alert("ok");
+    var brand = document.getElementById("brand");
+
+    var f = new FormData();
+    f.append("b", brand.value);
+
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if (request.readyState == 4 & request.status == 200) {
+            var response = request.responseText;
+            // alert(response);
+
+            if (response == "Success") {
+                document.getElementById("msg1").innerHTML = "Brand Register Successfully";
+                document.getElementById("msg1").className = "alert alert-success";
+                document.getElementById("msgDiv1").className = "d-block";
+            } else {
+                document.getElementById("msg1").innerHTML = response;
+                document.getElementById("msg1").className = "alert alert-danger";
+                document.getElementById("msgDiv1").className = "d-block";
+            }
+
+        }
+    }
+
+    request.open("POST", "brandRegisterProcess.php", true);
+    request.send(f);
+
+}
+
+function categoryReg() {
+    // alert("ok");
+    var category = document.getElementById("category");
+
+    var f = new FormData();
+    f.append("b", category.value);
+
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if (request.readyState == 4 & request.status == 200) {
+            var response = request.responseText;
+            // alert(response);
+
+            if (response == "Success") {
+                document.getElementById("msg2").innerHTML = "Category Register Successfully";
+                document.getElementById("msg2").className = "alert alert-success";
+                document.getElementById("msgDiv2").className = "d-block";
+            } else {
+                document.getElementById("msg2").innerHTML = response;
+                document.getElementById("msg2").className = "alert alert-danger";
+                document.getElementById("msgDiv2").className = "d-block";
+            }
+
+        }
+    }
+
+    request.open("POST", "categoryRegisterProcess.php", true);
+    request.send(f);
+}
+
+function colorReg() {
+    // alert("ok");
+    var color = document.getElementById("color");
+
+    var f = new FormData();
+    f.append("b", color.value);
+
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if (request.readyState == 4 & request.status == 200) {
+            var response = request.responseText;
+            // alert(response);
+
+            if (response == "Success") {
+                document.getElementById("msg3").innerHTML = "Color Register Successfully";
+                document.getElementById("msg3").className = "alert alert-success";
+                document.getElementById("msgDiv3").className = "d-block";
+            } else {
+                document.getElementById("msg3").innerHTML = response;
+                document.getElementById("msg3").className = "alert alert-danger";
+                document.getElementById("msgDiv3").className = "d-block";
+            }
+
+        }
+    }
+
+    request.open("POST", "colorRegisterProcess.php", true);
+    request.send(f);
+}
+
+function sizeReg() {
+    // alert("ok");
+    var size = document.getElementById("size");
+
+    var f = new FormData();
+    f.append("b", size.value);
+
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if (request.readyState == 4 & request.status == 200) {
+            var response = request.responseText;
+            // alert(response);
+
+            if (response == "Success") {
+                document.getElementById("msg4").innerHTML = "Size Register Successfully";
+                document.getElementById("msg4").className = "alert alert-success";
+                document.getElementById("msgDiv4").className = "d-block";
+            } else {
+                document.getElementById("msg4").innerHTML = response;
+                document.getElementById("msg4").className = "alert alert-danger";
+                document.getElementById("msgDiv4").className = "d-block";
+            }
+
+        }
+    }
+
+    request.open("POST", "sizeRegisterProcess.php", true);
+    request.send(f);
+}
+
+function  registerProduct() {
+
+    // alert("ok");
+
+    var pname = document.getElementById("pname");
+    var cat = document.getElementById("cat");
+    var sub_cat = document.getElementById("sub_cat");
+    var size = document.getElementById("size");
+    var desc = document.getElementById("desc");
+    var file = document.getElementById("file");
+
+    var form = new FormData();
+    form.append("pn", pname.value);
+    form.append("c", cat.value);
+    form.append("sub_cat", sub_cat.value);
+    form.append("s", size.value);
+    form.append("d", desc.value);
+    form.append("image", file.files[0]);
+
+
+    var req = new XMLHttpRequest();
+    req.onreadystatechange = function () {
+        if (req.readyState == 4 && req.status == 200) {
+            var resp = req.responseText;
+            alert(resp);
+            location.reload();
+        }
+    }
+    req.open("POST", "addProductProcess.php", true);
+    req.send(form);
+
+}
+
+function updateStock() {
+
+    var pname = document.getElementById("selectproduct");
+    var qty = document.getElementById("stockqty");
+    var price = document.getElementById("unitprice");
+
+    // alert(pname.value)
+
+    var form = new FormData();
+    form.append("p", pname.value);
+    form.append("q", qty.value);
+    form.append("up", price.value);
+
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState == 4 & request.status == 200) {
+            var response = request.responseText;
+            alert(response);
+            location.reload();
+        }
+    }
+
+    request.open("POST","adminStockUpdateProcess.php",true);
+    request.send(form);
+ 
+}
+
+function loadProduct(x) {
+    var page = x;
+    // alert(x);
+
+    var f = new FormData();
+    f.append("p", page);
+
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState == 4 & request.status == 200) {
+            var response = request.responseText;
+            // alert(response);
+            document.getElementById("pid").innerHTML = response;
+          
+        }
+    }
+
+    request.open("POST", "loadProductProcess.php", true);
+    request.send(f);
+
+}
+
+

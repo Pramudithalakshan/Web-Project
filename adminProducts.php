@@ -8,7 +8,7 @@ if (isset($_SESSION["a"])) {
 ?>
 
     <!DOCTYPE html>
-    <html lang="en" data-bs-theme="dark">
+    <html lang="en">
 
     <head>
         <meta charset="UTF-8">
@@ -18,7 +18,7 @@ if (isset($_SESSION["a"])) {
         <title>online store</title>
     </head>
 
-    <body class="adminBody">
+    <body class="admin-body">
         <!-- nav bar -->
         <?php include "adminNavBar.php" ?>
         <!-- nav bar -->
