@@ -11,7 +11,7 @@
 
 </head>
 
-<body>
+<body onload="loadProduct(0);">
 
     <?php
 
@@ -83,8 +83,8 @@
                         <!--category dropdown-->
 
                         <form class="d-flex me-5 " role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="productsearch" onkeyup="Basicsearch(0);">
+                            <button class="btn btn-outline-success" type="submit" >Search</button>
                         </form>
                         
                         <button class="btn btn-outline-danger" type="submit">Advance Search</button>

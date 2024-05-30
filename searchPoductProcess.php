@@ -3,6 +3,7 @@ include "connection.php";
 
 $pageno = 0;
 $page = $_POST["p"];
+$product = $_POST["ps"];
 
 if (0 != $page) {
     $pageno = $page;
@@ -10,7 +11,7 @@ if (0 != $page) {
     $pageno = 1;
 }
 
-$q = "SELECT * FROM `stock` INNER JOIN `product` ON `stock`.`product_id` = `product`.`id` ORDER BY `stock`.stock_id ASC";
+$q = "SELECT * FROM `stock` INNER JOIN `product` ON `stock`.`product_id` = `product`.`id` WHERE `product`.`name` LIKE '%$product%'";
 $rs = Database::search($q);
 $num = $rs->num_rows;
 
@@ -24,7 +25,17 @@ $rs2 = Database::search($q2);
 $num2  = $rs2->num_rows;
 
 if ($num2 == 0) {
-    echo ("Not avaliable Stock");
+    //echo ("Not avaliable Stock");
+
+    ?>
+     <div class="d-flex flex-column justify-content-center text-center mt-5">
+        <h5>Search No Result</h5>
+        <p>We're Sorry, We cannot find any matches for your search term..</p>
+    </div>
+    
+    <?php
+
+
 } else {
 
     for ($i = 0; $i < $num2; $i++) {
@@ -67,7 +78,7 @@ if ($num2 == 0) {
                                                             if ($pageno <= 1) {
                                                                 echo ("#");
                                                             } else {
-                                                            ?> onclick="loadProduct( <?php echo ($pageno - 1) ?>);" <?php
+                                                            ?> onclick="Basicsearch( <?php echo ($pageno - 1) ?>);" <?php
                                                                                                                     }
 
                                                                                                                         ?>>Previous</a></li>
@@ -79,7 +90,7 @@ if ($num2 == 0) {
 
                 ?>
                         <li class="page-item active">
-                            <a class="page-link" onclick="loadProduct(<?php echo  $y ?> );"><?php echo $y ?></a>
+                            <a class="page-link" onclick="Basicsearch(<?php echo  $y ?> );"><?php echo $y ?></a>
                         </li>
 
                     <?php
@@ -88,7 +99,7 @@ if ($num2 == 0) {
 
                     ?>
                         <li class="page-item ">
-                            <a class="page-link" onclick="loadProduct(<?php echo  $y ?> );"><?php echo $y ?></a>
+                            <a class="page-link" onclick="Basicsearch(<?php echo  $y ?> );"><?php echo $y ?></a>
                         </li>
 
                 <?php
@@ -104,7 +115,7 @@ if ($num2 == 0) {
                                                             if ($pageno >= $num_of_page) {
                                                                 echo ("#");
                                                             } else {
-                                                            ?> onclick="loadProduct( <?php echo ($pageno + 1) ?>);" <?php
+                                                            ?> onclick="Basicsearch( <?php echo ($pageno + 1) ?>);" <?php
                                                                                                                     }
 
                                                                                                                         ?>>Next</a></li>

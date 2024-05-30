@@ -221,7 +221,7 @@ function registerProduct() {
 }
 
 
- 
+
 
 
 
@@ -524,7 +524,7 @@ function sizeReg() {
     request.send(f);
 }
 
-function  registerProduct() {
+function registerProduct() {
 
     // alert("ok");
 
@@ -579,9 +579,9 @@ function updateStock() {
         }
     }
 
-    request.open("POST","adminStockUpdateProcess.php",true);
+    request.open("POST", "adminStockUpdateProcess.php", true);
     request.send(form);
- 
+
 }
 
 function loadProduct(x) {
@@ -597,7 +597,7 @@ function loadProduct(x) {
             var response = request.responseText;
             // alert(response);
             document.getElementById("pid").innerHTML = response;
-          
+
         }
     }
 
@@ -607,3 +607,22 @@ function loadProduct(x) {
 }
 
 
+function Basicsearch(x) {
+    var page = x;
+    var psearch = document.getElementById("productsearch");
+
+    var form = new FormData();
+    form.append("p", page);
+    form.append("ps", psearch.value);
+
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState == 4 && request.status == 200) {
+            var response = request.responseText;
+
+            document.getElementById("pid").innerHTML = response;
+        }
+    }
+request.open("POST", "searchPoductProcess.php", true);
+request.send(form);
+}
