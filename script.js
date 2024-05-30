@@ -610,10 +610,12 @@ function loadProduct(x) {
 function Basicsearch(x) {
     var page = x;
     var psearch = document.getElementById("productsearch");
+    var bscat = document.getElementById("basic-search-cat");
 
     var form = new FormData();
     form.append("p", page);
     form.append("ps", psearch.value);
+
 
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {

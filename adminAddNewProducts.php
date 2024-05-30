@@ -58,26 +58,7 @@ if (isset($_SESSION["a"])) {
                         </select>
                     </div>
 
-                    <div class="mb-3 col-12">
-                        <label class="form-label">Sub Category</label>
-                        <select class="form-control" id="sub_cat">
-                            <option value="0">Select Your Sub Category</option>
-                            <?php
-                            $rs =  Database::search("SELECT * FROM `sub_category`");
-                            $num = $rs->num_rows;
-
-                            for ($x = 0; $x < $num; $x++) {
-                                $data = $rs->fetch_assoc();
-
-                            ?>
-                                <option value="<?php echo ($data["sub_cat_id"]); ?>"><?php echo ($data["sub_category_name"]); ?></option>
-                            <?php
-                            }
-
-                            ?>
-
-                        </select>
-                    </div>
+ 
 
                     <div class="mb-3 col-12">
                         <label class="form-label">Size</label>

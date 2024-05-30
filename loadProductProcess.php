@@ -31,24 +31,31 @@ if ($num2 == 0) {
         $d = $rs2->fetch_assoc();
 ?>
         <!-- card -->
+
+
+
+        
         <div class=" col-3 mt-5 d-flex justify-content-center col-8 offset-2 offset-lg-0 col-lg-3">
 
-            <div class="card" style="width: 300px;">
+            <div class="card bg-info" style="width: 300px;">
                 <img src="<?php echo $d["path"] ?>" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $d["name"] ?></h5>
                     <p class="card-text"><?php echo $d["description"] ?></p>
                     <p class="card-text">Rs: <?php echo $d["price"] ?></p>
+                    
                     <div class="d-flex justify-content-center">
-                        <button class="btn btn-outline-primary col-6">Add To Cart</button>
-                        <button class="btn btn-outline-warning col-6 ms-2">Buy Now</button>
-                    </div>
+                <button class="btn btn-primary col-6 mb-2">Add To Cart</button>
+                <button class="btn btn-warning col-6 ms-2">Buy Now</button>
+            </div>
+
 
                 </div>
             </div>
 
         </div>
         <!-- card -->
+
 
     <?php
     }

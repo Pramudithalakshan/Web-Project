@@ -11,7 +11,7 @@
 
 </head>
 
-<body onload="loadProduct(0);">
+<body>
 
     <?php
 
@@ -52,7 +52,7 @@
                             <div class="input-group">
 
 
-                                <select class="form-select bg-info" style="max-width: 250px;">
+                                <select class="form-select bg-info" style="max-width: 250px;" id="basic-search-cat" onload="loadProduct(0);">
                                     <option value="0">All Categories</option>
 
                                     <?php
@@ -82,11 +82,31 @@
 
                         <!--category dropdown-->
 
-                        <form class="d-flex me-5 " role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="productsearch" onkeyup="Basicsearch(0);">
-                            <button class="btn btn-outline-success" type="submit" >Search</button>
+                        <form class="d-flex me-5" role="search">
+                            <input class="form-control " type="search" placeholder="Search" aria-label="Search" id="productsearch" onkeyup="Basicsearch(0);">
+                            <button class="btn btn-outline-success" type="submit">Reload</button>
                         </form>
-                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         <button class="btn btn-outline-danger" type="submit">Advance Search</button>
 
 
