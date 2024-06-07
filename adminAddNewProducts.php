@@ -16,7 +16,8 @@ if (isset($_SESSION["a"])) {
 
         <link rel="stylesheet" href="bootstrap.css" />
         <link rel="stylesheet" href="style.css" />
-        <script src="bootstrap.js"></script> <!-- bootstrap.js is a JavaScript file, not a stylesheet -->
+        <script src="bootstrap.js"></script>  
+        <link rel="icon" href="resource/img/icon1.svg"/>
     </head>
 
     <body class="admin-body">
@@ -58,7 +59,7 @@ if (isset($_SESSION["a"])) {
                         </select>
                     </div>
 
- 
+
 
                     <div class="mb-3 col-12">
                         <label class="form-label">Size</label>
@@ -98,11 +99,17 @@ if (isset($_SESSION["a"])) {
                     </div>
                 </div>
 
+                <!--Footer-->
+                <div class="fixed-bottom col-12">
+                    <p class="text-center">&copy; 2024 FruitVista</p>
+                </div>
+                <!--Footer-->
+
             </div>
         </div>
 
 
-       
+
 
         <script src="script.js"></script>
     </body>

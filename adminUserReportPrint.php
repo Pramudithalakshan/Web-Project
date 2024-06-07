@@ -17,6 +17,7 @@ if (isset($_SESSION["a"])) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="bootstrap.css">
+        <link rel="icon" href="resource/img/icon1.svg"/>
         <title>User Report</title>
     </head>
 
@@ -25,7 +26,7 @@ if (isset($_SESSION["a"])) {
             <a href="adminReport.php"><img src="Resources/back.png" height="25"></a>
         </div>
 
-        <div>
+        <div id="printarea">
             <div class="container mt-3">
                 <h2 class="text-center ">User Report</h2>
                 <table class="table table-hover mt-5">
@@ -74,7 +75,7 @@ if (isset($_SESSION["a"])) {
         </div>
 
         <div class="container mt-3 d-flex justify-content-end">
-            <button class="btn btn-outline-dark col-2" onclick="window.print()">Print</button>
+            <button class="btn btn-outline-dark col-2" onclick="window.printDiv()">Print</button>
         </div>
 
         <script src="script.js"></script>

@@ -31,29 +31,47 @@ if ($num2 == 0) {
         $d = $rs2->fetch_assoc();
 ?>
         <!-- card -->
+        <!DOCTYPE html>
+        <html lang="en">
 
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
 
+            <link rel="stylesheet" href="style.css"/>
+        </head>
 
-        
-        <div class=" col-3 mt-5 d-flex justify-content-center col-8 offset-2 offset-lg-0 col-lg-3">
+        <body>
 
-            <div class="card bg-info" style="width: 300px;">
-                <img src="<?php echo $d["path"] ?>" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo $d["name"] ?></h5>
-                    <p class="card-text"><?php echo $d["description"] ?></p>
-                    <p class="card-text">Rs: <?php echo $d["price"] ?></p>
-                    
-                    <div class="d-flex justify-content-center">
-                <button class="btn btn-primary col-6 mb-2">Add To Cart</button>
-                <button class="btn btn-warning col-6 ms-2">Buy Now</button>
-            </div>
+        <!--card-->
+            <div class="col-3 mt-5 d-flex justify-content-center col-8 offset-2 offset-lg-0 col-lg-3 fs-4 ">
 
+                <div class="card text-fw-bolder" style="width: 300px;">
 
+                    <a href="sigleProductView.php?s=<?php echo $d["stock_id"]; ?>">
+                        <img src="<?php echo $d["path"]; ?>" class="card-img-top w-100" alt="...">
+                    </a>
+
+                    <div class="card-body text-sm-center">
+                        <h5 class="card-title"><?php echo $d["name"] ?></h5>
+                        <p class="card-text"><?php echo $d["description"] ?></p>
+                        <p class="card-text text-primary">Rs: <?php echo $d["price"] ?></p>
+            
+                    </div>
                 </div>
-            </div>
 
-        </div>
+            </div>
+            <!--card-->
+
+            <script src="script.js"></script>
+        </body>
+
+        </html>
+
+
+
+
         <!-- card -->
 
 
@@ -75,9 +93,9 @@ if ($num2 == 0) {
                                                                 echo ("#");
                                                             } else {
                                                             ?> onclick="loadProduct( <?php echo ($pageno - 1) ?>);" <?php
-                                                                                                                    }
+                                                                                                                }
 
-                                                                                                                        ?>>Previous</a></li>
+                                                                                                                    ?>>Previous</a></li>
                 <?php
 
                 for ($y = 1; $y <= $num_of_page; $y++) {
@@ -112,9 +130,9 @@ if ($num2 == 0) {
                                                                 echo ("#");
                                                             } else {
                                                             ?> onclick="loadProduct( <?php echo ($pageno + 1) ?>);" <?php
-                                                                                                                    }
+                                                                                                                }
 
-                                                                                                                        ?>>Next</a></li>
+                                                                                                                    ?>>Next</a></li>
             </ul>
         </nav>
     </div>

@@ -13,17 +13,12 @@
 
 <body>
 
-    <?php
 
-    include "connection.php";
-
-    ?>
-
-    <div class="  container-fluid bg-info ">
+    <div class="  container-fluid bg-info  ">
 
 
-        <nav class="navbar navbar-expand-lg bg-info">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-info ">
+            <div class="container justify-content-center me-5">
                 <a class="navbar-brand" href="#"><img class="me-3" src="resource/img/icon1.ico" height="40" />Fruit Vista</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -31,88 +26,47 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" href="home.php">Home</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Cart</a>
+                        <li class="nav-item me-2">
+                            <a class="nav-link" href="cart.php">Cart</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sell</a>
+                        <li class="nav-item me-2">
+                            <a class="nav-link" href="userProfile.php">User Profile</a>
+                        </li>
+
+                        <li class="nav-item me-2">
+                            <a class="nav-link" href="orderHistory.php">Order History</a>
                         </li>
 
                         <li class="nav-item me-5">
                             <a class="nav-link" href="adminSignin.php">Admin</a>
                         </li>
 
-                        <!--category dropdown-->
-                        <div class="me-5">
-
-                            <div class="input-group">
 
 
-                                <select class="form-select bg-info" style="max-width: 250px;" id="basic-search-cat" onload="loadProduct(0);">
-                                    <option value="0">All Categories</option>
-
-                                    <?php
-
-                                    $cat_rs = Database::search("SELECT * FROM `category`");
-                                    $cat_num = $cat_rs->num_rows;
-
-                                    for ($x = 0; $x < $cat_num; $x++) {
-                                        $homecategory_data = $cat_rs->fetch_assoc();
-
-                                    ?>
-
-                                        <option value="<?php echo $homecategory_data["cat_id"]; ?>">
-                                            <?php echo $homecategory_data["category_name"]; ?>
-                                        </option>
-
-                                    <?php
-                                    }
-
-                                    ?>
-
-                                </select>
-
-                            </div>
-
-                        </div>
-
-                        <!--category dropdown-->
+                         
 
                         <form class="d-flex me-5" role="search">
                             <input class="form-control " type="search" placeholder="Search" aria-label="Search" id="productsearch" onkeyup="Basicsearch(0);">
-                            <button class="btn btn-outline-success" type="submit">Reload</button>
+                             
                         </form>
+                        <a href="advanceSearch.php"> <button class="btn btn-outline-danger me-5" type="submit" onclick="viewFilter();">Advance Search</button></a>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        <button class="btn btn-outline-danger" type="submit">Advance Search</button>
-
-
+                        
+ 
                     </ul>
+
                 </div>
+
+
+
             </div>
+
+
         </nav>
 
     </div>

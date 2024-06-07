@@ -1,28 +1,28 @@
 <?php
 include "connection.php";
 
-$uic = $_POST["sc"];
+$uec = $_POST["ue"];
 
-if (empty($uic)) {
-    echo ("Please Enter Your user Id");
+if (empty($uec)) {
+    echo ("Please Enter Your user email");
 } else {
-    $rs = Database::search("SELECT * FROM `user` WHERE `id` = '" . $uic . "' AND `user_type_id` = '2'");
+    $rs = Database::search("SELECT * FROM `user` WHERE `email` = '" . $uec . "' AND `user_type_id` = '1'");
     $num = $rs->num_rows;
 
     if ($num == 1) {
         $d = $rs->fetch_assoc();
 
-        if ($d["status"] == 1) {
-            Database::iud("UPDATE `user` SET `status` = '0' WHERE `id` = '" . $uid . "'");
+        if ($d["status_status_id"] == 1) {
+            Database::iud("UPDATE `user` SET `status_status_id` = '2' WHERE `email` = '" . $uec . "'");
             echo ("Deactive");
         }
 
-        if ($d["status"] == 0) {
-            Database::iud("UPDATE `user` SET `status` = '1' WHERE `id` = '" . $uid . "'");
+        if ($d["status_status_id"] == 2) {
+            Database::iud("UPDATE `user` SET `status_status_id` = '1' WHERE `email` = '" . $uec . "'");
             echo ("Active");
         }
     } else {
-        echo ("Invalid User ID");
+        echo ("Invalid Email");
     }
 }
 ?>

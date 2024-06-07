@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="bootstrap.js" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="icon" href="resource/img/icon1.svg"/>
 
 </head>
 

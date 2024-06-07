@@ -1,46 +1,47 @@
- 
-@font-face {
-    font-family: "ShadowsIntoLight";
-    src: url("font/ShadowsIntoLight-Regular.ttf");
-}
-
-@font-face{
-  font-family: "Overpass-VariableFont_wght";
-  src: url("font/Overpass-VariableFont_wght.ttf");
-}
-
-@font-face{
-  font-family: "SeymourOne-Regular";
-  src: url("font/SeymourOne-Regular.ttf");
-}
- .singup_box{
-    font-family: Overpass-VariableFont_wght;
-    font-size: 25px;
-    font-weight: bolder;
-    opacity: 90%;
-    
-    
+ @font-face {
+   font-family: "ShadowsIntoLight";
+   src: url("font/ShadowsIntoLight-Regular.ttf");
  }
- .signin_box2{
+
+ @font-face {
+   font-family: "Overpass-VariableFont_wght";
+   src: url("font/Overpass-VariableFont_wght.ttf");
+ }
+
+ @font-face {
+   font-family: "SeymourOne-Regular";
+   src: url("font/SeymourOne-Regular.ttf");
+ }
+
+ .singup_box {
    font-family: Overpass-VariableFont_wght;
-    font-weight: bolder;
-    font-size: 25px;
-    opacity: 90%;
+   font-size: 20px;
+   font-weight: bolder;
+   opacity: 90%;
+
+
  }
 
- 
- .adminSigninBody{
+ .signin_box2 {
+   font-family: Overpass-VariableFont_wght;
+   font-weight: bolder;
+   font-size: 20px;
+   opacity: 90%;
+ }
+
+
+ .adminSigninBody {
    background-image: url("resource/img/5.jpg");
    background-repeat: no-repeat;
    background-size: cover;
-   
+
    display: flex;
    justify-content: center;
    height: 100vh;
    align-items: center;
  }
 
- .adminSigninBox{
+ .adminSigninBox {
    width: 358px;
    height: 400px;
    border-radius: 50px;
@@ -49,60 +50,104 @@
    padding: 20px;
  }
 
- .admin-body{
+ .admin-body {
    background-image: url(resource/img/adminbackground.jpg);
-    
+
 
    display: flex;
    justify-content: center;
    height: 100vh;
    align-items: center;
  }
-.main-body{
-  background-image: url("resource/img/4.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  overflow-y: hidden;
-  
-  
 
-  
-}
-.singup_box{
- background-color: rgb(200, 168, 168);
- height: 550px;
- width: 800px; 
- border-radius: 20px;
- 
-}
- .signin_box2{
-  background-color: rgb(200, 200, 200);
-  height: 500px;
-  width: 600px; 
-  border-radius: 20px;
-  
+ .main-body {
+   background-image: url("resource/img/4.png");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   overflow-y: hidden;
+
+
+
 
  }
- 
- .product-card{
-  max-width: 350px;
-  margin: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px;
-}
 
-.product-card-body{
-  padding: 20px;
-  text-align: center;
-}
+ .singup_box {
+   background-color: rgb(200, 168, 168);
+   height: 550px;
+   width: 800px;
+   border-radius: 20px;
+
+ }
+
+ .signin_box2 {
+   background-color: rgb(200, 200, 200);
+   height: 500px;
+   width: 600px;
+   border-radius: 20px;
+
+
+ }
+
+ .product-card {
+   max-width: 350px;
+   margin: 20px;
+   border: 1px solid #ddd;
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 0 4px 8px;
+ }
+
+ .product-card-body {
+   padding: 20px;
+   text-align: center;
+ }
+
+ .navbar-nav {
+   font-size: 15px;
+   font-weight: bolder;
+
+ }
+
+ .footer {
+   background-color: #f8f9fa;
+   padding: 100px 0;
+ }
+
+ .footer h3 {
+   font-weight: bold;
+   margin-bottom: 20px;
+ }
+
+ .footer p {
+   font-size: 14px;
+   line-height: 1.5;
+ }
+
+ .footer .list-inline {
+   margin-bottom: 20px;
+ }
+
+ .footer .btn-social-icon {
+   width: 40px;
+   height: 40px;
+   line-height: 40px;
+   text-align: center;
+   border-radius: 50%;
+   font-size: 16px;
+   color: #fff;
+   margin: 0 5px;
+ }
+
+ .footer .btn-facebook {
+   background-color: #3b5998;
+ }
+
+ .footer .btn-twitter {
+   background-color: #55acee;
+ }
+
+ .footer .btn-instagram {
+   background-color: #e4405f;
+ }
   
-.navbar-nav{
-  font-size: 15px;
-  font-weight: bolder;
-
-}
-
- 

@@ -30,7 +30,9 @@ include "connection.php";
             <div class="row g-2">
             <h2 class="text-center">Join With US</h2>
 
-
+<div class="mt-2 d-none" id="msgDiv1">
+                    <div class="alert alert-dark" role="alert" id="msg1"></div>
+                </div>
 
                 <div class="mt-3 d-none" id="msgdiv">
                     <div class="alert alert-danger" role="alert" id="msg">
@@ -108,9 +110,11 @@ include "connection.php";
         <div class="signin_box2 col-12 col-lg-4 p-3 d-none" id="signInBox">
             <div class="row g-5">
 
-                <div class="mt-2 d-none" id="msg 1">
+                
+<div class="mt-2 d-none" id="msgDiv1">
                     <div class="alert alert-dark" role="alert" id="msg1"></div>
                 </div>
+
 
                 <?php
                 $email = "";
@@ -148,9 +152,9 @@ include "connection.php";
                     </div>
                 </div>
                 <div class="col-6 text-end">
-                    <a href="#" class="link-primary">Forgot Password?</a>
+                    <a href="forgetPassword.php" class="link-primary">Forgot Password?</a>
                 </div>
-                <div class="col-6 col-lg-6 d-grid">
+                <div class="col-4 col-lg-6 d-grid">
                     <button class="btn btn-primary" onclick="signin();">Sign In</button>
                 </div>
                 <div class="col-6 col-lg-6 d-grid">

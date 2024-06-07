@@ -3,7 +3,7 @@
 include "connection.php";
 
 
-$addcategory = $_POST["b"];
+$addcategory = $_POST["c"];
 // echo($brand);
 
 if (empty($addcategory)){
