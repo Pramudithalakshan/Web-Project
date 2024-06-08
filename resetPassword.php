@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="bootstrap.js" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="bootstrap.css" />
-
+    <link rel="icon" href="resource/img/icon1.svg"/>
 </head>
 
 <body>
@@ -21,8 +21,9 @@
             <div class="row g-5">
 
             <h2 class="text-center">Reset Password</h2>
+
                 <div class="d-none">
-                    <input type="hidden" id="vcode" value="<?php echo ($_GET["vcode"]) ?>" >
+                    <input type="hidden" id="vcode" value="<?php echo ($_GET["vcode"]) ?>" />
                 </div>
 
 
@@ -30,6 +31,8 @@
                     <label class="form-label">New Password</label>
                     <input type="password" class="form-control" placeholder="**********" id="newpass1" />
                 </div>
+
+        
 
                 <div class="col-12">
                     <label class="form-label">Re-Enter Password</label>

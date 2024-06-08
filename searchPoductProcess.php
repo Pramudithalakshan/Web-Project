@@ -49,7 +49,7 @@ if ($num2 == 0) {
                 <img src="<?php echo $d["path"] ?>" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $d["name"] ?></h5>
-                    <p class="card-text"><?php echo $d["description"] ?></p>
+                  
                     <p class="card-text">Rs: <?php echo $d["price"] ?></p>
                     <div class="d-flex justify-content-center">
                         <button class="btn btn-outline-primary col-6">Add To Cart</button>

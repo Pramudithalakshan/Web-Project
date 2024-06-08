@@ -17,7 +17,7 @@ include "connection.php";
     <link rel="stylesheet" href="style.css">
 
     <link rel="#" href="#">
-    <link rel="stylesheet" href="resource/img/icon1.svg"/>
+    <link rel="icon" href="resource/img/icon1.svg"/>
 </head>
 
 <body class="main-body">

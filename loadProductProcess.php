@@ -55,7 +55,7 @@ if ($num2 == 0) {
 
                     <div class="card-body text-sm-center">
                         <h5 class="card-title"><?php echo $d["name"] ?></h5>
-                        <p class="card-text"><?php echo $d["description"] ?></p>
+                        
                         <p class="card-text text-primary">Rs: <?php echo $d["price"] ?></p>
             
                     </div>

@@ -112,6 +112,7 @@ if (isset($_SESSION["a"])) {
 
 
         <script src="script.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </body>
 
     </html>

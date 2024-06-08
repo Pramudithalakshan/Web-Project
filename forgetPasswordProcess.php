@@ -54,7 +54,7 @@ if ($num > 0) {
                                                     <h1 style="font-size: 25px; line-height: 1.5; font-weight: 600; color: #333;">Reset Password</h1>
                                                     <p style="margin-bottom: 24px; color: #666;">You can change your password by clicking on the button below</p>
                                                     <div style="margin: 20px 0;">
-                                                        <a href="http://localhost/FruitVista/resetPassword.php?$vcode='.$vcode.'" style="text-decoration: none; display: inline-block; background-color: #007bff; color: #ffffff; padding: 12px 24px; border-radius: 5px; font-size: 16px;">
+                                                        <a href="http://localhost/FruitVista/resetPassword.php?vcode='.$vcode.'" style="text-decoration: none; display: inline-block; background-color: #007bff; color: #ffffff; padding: 12px 24px; border-radius: 5px; font-size: 16px;">
                                                             <span>Reset Password</span>
                                                         </a>
                                                     </div>

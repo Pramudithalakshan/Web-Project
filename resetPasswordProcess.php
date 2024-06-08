@@ -1,9 +1,8 @@
 <?php
  
-session_start();
+
 include "connection.php";
-$user = $_SESSION["u"];
- 
+
  
 $vcode = $_POST["vcode"];
 $np1 = $_POST["np1"];
